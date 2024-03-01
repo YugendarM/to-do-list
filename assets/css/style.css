@@ -1,18 +1,24 @@
 * {
     margin: 0;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;  
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background: linear-gradient(#cad0ff, #e3e3e3); /* Linear gradient */
+    background-repeat: no-repeat; /* Prevent repeating gradient */
+    background-attachment: fixed;
 }
 
 .main__container{
-    background-color: antiquewhite;
-    height: 70%;
+    background-color: white;
+    height: 80%;
     width: 50%;
     position: absolute;
     top: 10%;
     left: 25%;
     overflow-y: scroll;
-
+    border-radius: 10px;
 }
 
 .main__container::-webkit-scrollbar{
@@ -27,14 +33,14 @@
 
 .main__header{
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 20px 0px;
 }
 
 .user__input__container{
+    
     display: flex;
     justify-content: center;
-    border-radius: 20px;
+    border-radius:5px;
     width: 500px;
 }
 
@@ -48,11 +54,12 @@
 }
 
 .user__input {
+    border: #EEEEEE 2px solid;
     padding: 10px 20px;
     width: 100%;
     font-size: 16px;
     border-radius: 5px 0px 0px 5px;
-    border: none;
+    /* border: none; */
 }
 
 .list__container{
@@ -65,8 +72,7 @@
 }
 
 .to__do__task {
-    background-color: white;
-    /* padding: 10px 20px; */
+    background-color: #F6F5F5;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -117,27 +123,8 @@
 
 .checked__task__desc {
     text-decoration: line-through;
-    color: gray;
+    color: #EEEEEE;
     font-size: 18px;
     padding: 16px 20px;
 }
 
-.checked__check__button{
-    background-color: gray;
-    padding: 14px 20px;
-    color: aliceblue;
-    border-radius: 5px 0px 0px 5px;
-    border: none;
-    font-size: 20px;
-    cursor: not-allowed;
-}
-
-.checked__delete__button{
-    background-color: gray;
-    padding: 10px 20px;
-    color: aliceblue;
-    border-radius: 0px 5px 5px 0px;
-    border: none;
-    font-size: 20px;
-    cursor: not-allowed;
-}
