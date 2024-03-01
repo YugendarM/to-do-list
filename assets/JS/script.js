@@ -1,12 +1,15 @@
-const newTask = (userInput) => 
-    `<div class="to__do__task">
+let taskId = 0;
+const newTask = (userInput) => {
+        taskId++;
+        return `<div class="to__do__task" id="task_${taskId}">
         <div class="task__left__part">
-            <button class="check__button"><i class="fa-solid fa-check"></i></button>
+            <button class="check__button" onClicked="handleCheck(${taskId})"><i class="fa-solid fa-check"></i></button>
             <p class="task__desc">${userInput}</p>
         </div>
-        <button onClick="handleDelete()" class="delete__button"><i class="fa-solid fa-trash"></i></button>
+        <button onClick="handleDelete(${taskId})" class="delete__button"><i class="fa-solid fa-trash"></i></button>
     </div>`
 
+    }
 
 
 const handleSubmit = () => {
@@ -25,10 +28,14 @@ const handleSubmit = () => {
     }
 }
 
-const handleDelete = () => {
-    console.log("deleteclickde");
+const handleDelete = (taskId) => {
+    console.log("deleteclickde"+taskId);
+    const taskElement = document.getElementById(`task_${taskId}`);
+    taskElement.remove()
+    alert("Task deleted successfully")
+    
 }
 
-const handleCheck = () => {
-    console.log("check clicked");
+const handleCheck = (taskId) => {
+    console.log("check clicked"+taskId);
 }
