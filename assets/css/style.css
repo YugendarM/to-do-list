@@ -113,3 +113,31 @@
     background-color: aliceblue;
     color: green;
 }
+
+
+.checked__task__desc {
+    text-decoration: line-through;
+    color: gray;
+    font-size: 18px;
+    padding: 16px 20px;
+}
+
+.checked__check__button{
+    background-color: gray;
+    padding: 14px 20px;
+    color: aliceblue;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+    font-size: 20px;
+    cursor: not-allowed;
+}
+
+.checked__delete__button{
+    background-color: gray;
+    padding: 10px 20px;
+    color: aliceblue;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+    font-size: 20px;
+    cursor: not-allowed;
+}

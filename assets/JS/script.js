@@ -3,8 +3,8 @@ const newTask = (userInput) => {
         taskId++;
         return `<div class="to__do__task" id="task_${taskId}">
         <div class="task__left__part">
-            <button class="check__button" onClicked="handleCheck(${taskId})"><i class="fa-solid fa-check"></i></button>
-            <p class="task__desc">${userInput}</p>
+            <button class="check__button" id="check_${taskId}" onClick="handleCheck(${taskId})"><i class="fa-solid fa-check"></i></button>
+            <p class="task__desc" id="input_${taskId}">${userInput}</p>
         </div>
         <button onClick="handleDelete(${taskId})" class="delete__button"><i class="fa-solid fa-trash"></i></button>
     </div>`
@@ -38,4 +38,11 @@ const handleDelete = (taskId) => {
 
 const handleCheck = (taskId) => {
     console.log("check clicked"+taskId);
+    const userInput = document.getElementById(`input_${taskId}`);
+    userInput.style.textDecoration = "line-through";
+    userInput.style.color = "gray";
+
+    const checkButton = document.getElementById(`check_${taskId}`);
+    checkButton.style.backgroundColor = "gray";
+    checkButton.style.cursor = "not-allowed";
 }
